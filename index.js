@@ -18,7 +18,9 @@ try {
         });
 
         if (versionFile == null) {
-            core.setFailed(`Could not file ${versionFilePath}`)
+            console.log(`Could not find file to read project version`);
+            core.setOutput('project-version', null);
+            return;
         }
 
         octokit.request("GET " + versionFile.raw_url)
