@@ -1,0 +1,16 @@
+name: 'Project Version Action'
+description: 'Retrieves the project version from a file in the Repository'
+inputs:
+  github-token:
+    description: The GitHub token used to create an authenticated client
+    default: ${{github.token}}
+    required: false
+  version-file-path:
+    description: 'The path of the file in the repo with the version'
+    required: true
+outputs:
+  project-version:
+    description: 'The project version'
+runs:
+  using: 'node12'
+  main: 'index.js'
