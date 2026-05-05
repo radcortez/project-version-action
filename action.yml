@@ -12,5 +12,5 @@ outputs:
   project-version:
     description: 'The project version'
 runs:
-  using: 'node12'
+  using: 'node24'
   main: 'index.js'
